@@ -1,0 +1,32 @@
+{
+    "name": "c2is/apns-sender",
+    "description": "Send batch notification to multiple devices through Apple services.",
+    "keywords": [
+        "notification",
+        "push",
+        "apple",
+        "apns"
+    ],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Guillaume Manen",
+            "email": "g.manen@c2is.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"C2iS\\ApnsSender\\": "src/"}
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "psr/log": "^1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.1"
+    }
+}
