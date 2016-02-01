@@ -5,7 +5,6 @@ namespace C2iS\ApnsSender;
 use C2iS\ApnsSender\Utils\Sleep;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use Symfony\Component\Stopwatch\Stopwatch;
 
 /**
  * Class Worker
@@ -49,7 +48,7 @@ class Worker
             $token   = $queue->current();
             $message = MessageFactory::createMessage($key, $token, $content);
 
-            if (!$writeResult = $this->streamHandler->write($message)) {
+            if (!$this->streamHandler->write($message)) {
                 $streamError  = $this->streamHandler->readError();
                 $messageError = MessageFactory::createError($queue->getArrayCopy(), $streamError, $key, $token);
                 $this->logger->info(
