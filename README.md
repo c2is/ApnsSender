@@ -30,8 +30,7 @@ Once everything is sent, a last check for errors is done, with the same result a
 An array containing all errors that could not be resolved is then returned, so you can handle them however you want.
 
 The goal is to abstract stream errors and gather as much information as possible for you to handle them.
-This is actually not trivial because whatever the error (invalid token being the most common culprit), the stream is closed and you have to retry. Also probably the error happened, like, a thousand tokens ago. So you have to retry up from that point.
-This component does that. It handles the stream not being writable after an error occurs, it retries all the tokens that could not be sent, and returns the detailed error including status code and message from APNS so you can handle them in your application if necessary.
+This component handles the stream not being writable after an error occurs, it retries all the tokens that could not be sent, and returns a list of the errors it could not handle including status code and message from APNS so you can do whatever you want with them in your application.
 
 Usage
 -----
