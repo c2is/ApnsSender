@@ -1,3 +1,5 @@
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/64678405-7340-4a44-8979-973dd37d52b5/mini.png)](https://insight.sensiolabs.com/projects/64678405-7340-4a44-8979-973dd37d52b5)
+
 ApnsSender
 =========
 
