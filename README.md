@@ -22,7 +22,7 @@ The way this works is we open a stream to the notification service and send noti
 Two kinds of error can happen when writing to the stream:
 
 - The notification service wrote an error into the stream
-    If it's a retry-able error (mostly that's if it's an unknown error or a "processing error"), we retry sending the same notification to the same token. If it fails again, we move on to the next.
+    If it's a retry-able error (mostly if it's an unknown error or a "processing error"), we retry sending the same notification to the same token. If it fails again, we move on to the next.
 - No error from the notification service
     The stream just failed for some reason. We retry the last token and move on.
 
